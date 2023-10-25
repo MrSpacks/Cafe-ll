@@ -1,0 +1,185 @@
+/* Box sizing rule */
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  /* Remove default margin and padding */
+  body,
+  h1, h2, h3, h4, h5, h6,
+  p,
+  blockquote,
+  pre,
+  dl,
+  dd,
+  ol,
+  ul,
+  figure,
+  hr,
+  fieldset,
+  legend {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set default font styles */
+  body {
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Remove list styles */
+  ol, ul {
+    list-style: none;
+  }
+  
+  /* Remove hyperlinks default styles */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Remove table border spacing */
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background-color: #f2f2f2;
+    padding: 10px 0;
+}
+
+.logo {
+    float: left;
+    padding: 15px 0;
+    font-size: 24px;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Бургер-меню */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: transform 0.4s, opacity 0.4s;
+}
+
+/* Стили для разделов */
+section {
+    padding: 40px;
+}
+/* Gallery */
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .image-gallery > li {
+    flex-basis: 350px; /* width: 350px; */
+
+  }
+  
+  .image-gallery li img {
+    object-fit: cover;
+    max-width: 100%;
+    height: 350px;
+    vertical-align: middle;
+    border-radius: 5px;
+}
+
+/* Стили для футера */
+.sticky-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: left;
+    padding: 10px 40px;
+}
+
+/* Адаптивные стили */
+@media only screen and (max-width: 800px) {
+    .nav-menu {
+        display: none;
+        width: 100%;
+    }
+
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
