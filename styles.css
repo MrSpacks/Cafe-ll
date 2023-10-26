@@ -31,8 +31,17 @@ html {
   body {
     line-height: 1.6;
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('img/eiffel-tower-822537_1920.png') no-repeat left center fixed;
+    background-size: 30vh;
+
   }
-  
+  .wrapper{
+    position: relative;
+    z-index: 1;
+
+  }
   /* Remove list styles */
   ol, ul {
     list-style: none;
@@ -70,11 +79,15 @@ header {
 
 .logo {
     float: left;
-    padding: 15px 0;
-    font-size: 24px;
+    /* padding: 15px 0; */
+}
+.logo img{
+    width: 30px;
+
 }
 
 nav {
+    padding-top: 8px;
     float: right;
 }
 
@@ -83,6 +96,8 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+    align-items: center;
+    text-align: center;
 }
 
 nav li {
@@ -111,7 +126,30 @@ nav a {
 
 /* Стили для разделов */
 section {
-    padding: 40px;
+    padding: 20px;
+}
+/* About */
+.about_conteiner{
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 20px 0;
+}
+/* Menu */
+.menu_conteiner {
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 20px 0px;
+}
+.menu_title{
+    margin-bottom: 20px;
+}
+.menu {
+    max-width: 60vw;
+    display: flex;
+    margin: 0 auto;
+    box-shadow: 4px 5px 37px -7px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 4px 5px 37px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 5px 37px -7px rgba(0,0,0,0.75);
 }
 /* Gallery */
 
