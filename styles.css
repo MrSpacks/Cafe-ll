@@ -183,10 +183,22 @@ section {
     border-radius: 5px;
 }
 /* Contact us */
-
-form {
-    width: 400px;
+.contacts{
+    padding-bottom: 70px;
+    display: flex;
     margin: 0 auto;
+    justify-content: center;
+}
+.google_maps{
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+margin: 30px;
+  
+}
+form {
+    max-width: 400px;
+    /* margin: 0 auto; */
     font-size: 16px;
     line-height: 1.5;
 }
@@ -221,9 +233,7 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #3e8e41;
 }
-.contacts{
-    margin-bottom: 40px;
-}
+
 /* Стили для футера */
 .sticky-footer {
     position: fixed;
@@ -237,6 +247,9 @@ input[type="submit"]:hover {
 
 /* Адаптивные стили */
 @media only screen and (max-width: 800px) {
+    .contacts{
+        display: block;
+    }
     .non_mobile{
         display: none;
     }
